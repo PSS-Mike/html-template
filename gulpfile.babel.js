@@ -167,5 +167,7 @@ gulp.task('default', ['clean'], () => {
 
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
-    .pipe(ghPages());
+    .pipe(ghPages({
+      message: 'commit message'
+  }));
 });
